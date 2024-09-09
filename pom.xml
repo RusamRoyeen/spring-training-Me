@@ -5,12 +5,15 @@
   <groupId>com.cydeo</groupId>
   <artifactId>spring-training-Me</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>spring-training-Me</name>
   <url>http://maven.apache.org</url>
+    <modules>
+        <module>spring-05-Core-Abstraction</module>
+    </modules>
 
-  <properties>
+    <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
