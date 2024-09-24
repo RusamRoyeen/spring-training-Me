@@ -3,6 +3,7 @@ package com.cydeo.controller;
 import com.cydeo.bootstrap.DataGenerator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -20,8 +21,15 @@ public class StudentController {
 
     //localhost:8080/student/drop
     @RequestMapping("/welcome")
-    public String welcome(){
+    public String welcome(@RequestParam String name){
 
         return "student/welcome";
     }
+
+//    @RequestMapping("/welcome/{name}")
+//    public String welcome2(@PathVariable String name){
+//
+//        return "student/welcome";
+//    }
+
 }
