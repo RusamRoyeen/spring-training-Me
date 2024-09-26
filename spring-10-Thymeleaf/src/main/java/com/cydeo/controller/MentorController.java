@@ -1,6 +1,9 @@
 package com.cydeo.controller;
 
+import com.cydeo.model.Mentor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -9,14 +12,11 @@ public class MentorController {
 
 
         //localhost:8080/register
-        @RequestMapping("/register")
-        public String register(){
-            return "student/register";
+        @GetMapping("/register")
+        public String register(Model model){
+            model.addAttribute("mentor", new Mentor());
+            return "mentor/mentor-register";
         }
 
-    //localhost:8080/student/drop
-    @RequestMapping("/drop")
-    public String drop() {
-        return "student/register";
-    }
+
 }
