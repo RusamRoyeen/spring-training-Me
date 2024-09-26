@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/student")
 public class StudentController {
     //localhost:8080/student/register
-    @RequestMapping(value = "/register", method = RequestMethod.GET)
+//    @RequestMapping(value = "/register", method = RequestMethod.GET)
    @GetMapping("register")
     public String register(Model model){
 
